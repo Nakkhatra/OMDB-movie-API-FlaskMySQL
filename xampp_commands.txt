@@ -1,0 +1,49 @@
+Ref: https://stackoverflow.com/questions/40480843/xampp-another-web-server-is-already-running
+
+##########################
+Stop all servers
+##########################
+
+
+sudo /etc/init.d/apache2 stop
+
+sudo /etc/init.d/mysql stop
+
+sudo /etc/init.d/proftpd stop
+
+
+##########################
+Stop nginx
+##########################
+
+sudo systemctl stop nginx
+
+
+
+##########################
+For FTP port
+##########################
+
+
+sudo gedit /opt/lampp/etc/proftpd.conf
+
+#change PORT to random number 21 to 28(or random number)
+
+sudo gedit /opt/lampp/xampp 
+
+# testport 21 to 28(or random number)
+
+
+##########################
+Starting xampp server
+##########################
+
+sudo /opt/lampp/lampp restart
+
+sudo /opt/lampp/lampp start
+
+(GUI Command below)
+
+sudo /opt/lampp/manager-linux-x64.run
+
+
